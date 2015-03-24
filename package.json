@@ -1,0 +1,23 @@
+{
+  "name": "BootstrapPractice1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "live-server": "^0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrickbogucki/BootstrapPractice1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickbogucki/BootstrapPractice1/issues"
+  },
+  "homepage": "https://github.com/patrickbogucki/BootstrapPractice1"
+}
