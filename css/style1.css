@@ -34,6 +34,7 @@ body {
 
 .logo:hover {
 	border-color: #808080;
+	color: #808080;
 }
 
 .nav {
@@ -43,6 +44,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	color: #ffffff;
 }
 /*
 .nav-list {
@@ -66,12 +68,12 @@ a:hover {
 
 .cover-page {
 	background-image: url('../images/car2.jpg');
+	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
 	
 
 	height: 100vh;
-	margin-bottom: 50px;
 	display: flex;
 
 	flex-direction: column;
@@ -89,6 +91,7 @@ a:hover {
 
 .long-text {
 	width: 800px;
+	padding-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -98,3 +101,24 @@ h1 {
 	font-size: 70pt;
 	text-shadow: 2px 2px 10px #000000;
 }
+
+.down {
+	height: 10%;
+	width: 10%;
+}
+
+.down:hover {
+	opacity: 0.5;
+}
+
+.the-end {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	width: 100%;
+	margin: 0px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #000000;
+	color: #ffffff;
+} 
