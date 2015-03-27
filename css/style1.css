@@ -7,17 +7,7 @@ body {
 
 }
 
-/*.p {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}*/
-
 .nav-container {
-	
 	width: 100%;
 }
 
@@ -25,11 +15,12 @@ body {
 	position: fixed;
 	top: 0px;
 	color: #ffffff;
-	width: 51px;
-	height: auto;
+	width: 45px;
+	height: 45px;
 	left: 40px;
 	border: dashed;
 	text-align: center;
+	z-index: 200;
 }
 
 .logo-inverted {
@@ -50,11 +41,12 @@ body {
 	text-align: center;
 	color: #ffffff;
 }
-/*
-.nav-list {
-	list-style-type: none;
-	padding: 0px;
-}*/
+
+.nav-fixed {
+	position: fixed;
+	background-color: #000000;
+
+}
 
 
 a:link,
