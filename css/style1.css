@@ -22,7 +22,7 @@ body {
 }
 
 .logo {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	color: #ffffff;
 	width: 51px;
@@ -30,6 +30,10 @@ body {
 	left: 40px;
 	border: dashed;
 	text-align: center;
+}
+
+.logo-inverted {
+	color: #000000;
 }
 
 .logo:hover {
@@ -52,9 +56,6 @@ body {
 	padding: 0px;
 }*/
 
-a {
-
-}
 
 a:link,
 a:visited {
@@ -74,7 +75,12 @@ a:hover {
 	
 
 	height: 100vh;
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
 
 	flex-direction: column;
 	justify-content: center;
@@ -90,7 +96,7 @@ a:hover {
 }
 
 .long-text {
-	width: 800px;
+	width: 50%;
 	padding-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -121,4 +127,5 @@ h1 {
 	margin-right: auto;
 	background-color: #000000;
 	color: #ffffff;
+	text-decoration: underline;
 } 
