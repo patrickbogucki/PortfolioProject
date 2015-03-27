@@ -32,6 +32,10 @@ body {
 	color: #808080;
 }
 
+.initials {
+	margin-top: 13px;
+}
+
 .nav {
 	position: absolute;
 	width: 100%;
