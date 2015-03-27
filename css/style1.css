@@ -7,33 +7,33 @@ body {
 
 }
 
-/*.p {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}*/
-
 .nav-container {
-	
 	width: 100%;
 }
 
 .logo {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	color: #ffffff;
-	width: 51px;
-	height: auto;
+	width: 45px;
+	height: 45px;
 	left: 40px;
 	border: dashed;
 	text-align: center;
+	z-index: 200;
+}
+
+.logo-inverted {
+	color: #000000;
 }
 
 .logo:hover {
 	border-color: #808080;
+	color: #808080;
+}
+
+.initials {
+	margin-top: 13px;
 }
 
 .nav {
@@ -43,16 +43,15 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	color: #ffffff;
 }
-/*
-.nav-list {
-	list-style-type: none;
-	padding: 0px;
-}*/
 
-a {
+.nav-fixed {
+	position: fixed;
+	background-color: #000000;
 
 }
+
 
 a:link,
 a:visited {
@@ -66,13 +65,18 @@ a:hover {
 
 .cover-page {
 	background-image: url('../images/car2.jpg');
+	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
 	
 
 	height: 100vh;
-	margin-bottom: 50px;
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
 
 	flex-direction: column;
 	justify-content: center;
@@ -88,7 +92,8 @@ a:hover {
 }
 
 .long-text {
-	width: 800px;
+	width: 50%;
+	padding-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -98,3 +103,25 @@ h1 {
 	font-size: 70pt;
 	text-shadow: 2px 2px 10px #000000;
 }
+
+.down {
+	height: 10%;
+	width: 10%;
+}
+
+.down:hover {
+	opacity: 0.5;
+}
+
+.the-end {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	width: 100%;
+	margin: 0px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #000000;
+	color: #ffffff;
+	text-decoration: underline;
+} 
