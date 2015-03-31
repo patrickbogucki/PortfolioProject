@@ -196,6 +196,7 @@ h1 {
 	margin: 20px;
 	display: inline-block;
 	vertical-align: bottom;
+	cursor: pointer;
 	z-index: 100;
 }
 
