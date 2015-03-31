@@ -26,20 +26,83 @@ var main = function() {
 		}
 		else if($(document).scrollTop() < window.innerHeight) {
 			$('.logo').removeClass('logo-inverted');
-			$('.nav').removeClass('nav-fixed');
+			$('.nav-container').removeClass('nav-fixed');
 			$navVisible = false;
 		}
+
+		// Increase loadbar during scrolling by changing
+		// the css width value
+		$('.progress-bar').css('width', function() {
+			return ($(document).width() * ($(document).scrollTop() / ($(document).height() - window.innerHeight)));
+		});
+
 	});
 
 	var showNavBar = function() {
 		// $('.logo, .logo a').addClass('logo-inverted');
-		$('.nav').addClass('nav-fixed');
+		$('.nav-container').addClass('nav-fixed');
 		if(!$navVisible) {
-			$('.nav').hide();
-			$('.nav').fadeIn('slow');
+			$('.nav-container').hide();
+			$('.nav-container').fadeIn('slow');
 			$navVisible = true;
 		}
 	};
+
+
+	$('.info').slideUp(200);
+	// Slide up info panel on project previews on hover
+	$('.project').mouseenter(function() {
+		$(this).children('.info').stop().slideDown(200);
+	});
+	$('.project').mouseleave(function() {
+		$('.info').stop().slideUp(200);
+	});
+
+
+	// TODO have gallery items fade in when scrolling and their
+	// area comes in view
+
+
+	// Menu that slides in from the side when logo is clicked
+	// Commented areas also slide body so menu doesn't cover it
+	var menuOpen = false;
+	$('.logo').click(function() {
+		var menuWidth = $('.menu-panel').width();
+		if(!menuOpen) {
+			// $('body').animate({
+			// 		left: '' + menuWidth + 'px'
+			// 	}, 200);
+			$('.menu-panel').stop().animate({
+				left: '0px'
+				}, 200);
+			menuOpen = true;
+		}
+		else if(menuOpen) {
+			// $('body').animate({
+			// 		left: '0px'
+			// 	}, 200);
+			$('.menu-panel').stop().animate({
+				left: '-' + menuWidth + 'px'
+				}, 200);
+			menuOpen = false;
+		}
+	});
+
+
+	// Waypoints - nav items become underlined when their
+	// div area takes up more than 50% of the screen.
+	var waypointPortfolio = new Waypoint({
+		element: $('.gallery-container'),
+		handler: function(direction) {
+			if(direction === 'down') {
+				$('.nav-item-portfolio').addClass('nav-item-portfolio-inview')
+			}
+			else if(direction === 'up') {
+				$('.nav-item-portfolio').removeClass('nav-item-portfolio-inview')
+			}
+		},
+		offset: '50%'
+	});
 };
 
 
