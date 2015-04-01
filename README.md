@@ -1,7 +1,7 @@
-# PortfolioProject (aka BootstrapPractice1)
+# PortfolioProject
 
 Public website address using files from gh-pages repo.
-http://patrickbogucki.github.io/BootstrapPractice1/html/index.html
+http://patrickbogucki.github.io/PortfolioProject/html/index.html
 
  -----------
  
