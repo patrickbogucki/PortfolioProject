@@ -5,6 +5,10 @@ body {
 	position: relative;
 }
 
+a {
+	cursor: pointer;
+}
+
 .progress-bar {
 	position: fixed;
 	top: 0px;
@@ -16,12 +20,13 @@ body {
 }
 
 .menu-panel {
-	left: -250px; 
+	left: -200px; 
 	height: 100%;
 	position: fixed;
-	width: 250px;
+	width: 200px;
 	background-color: #353445;
 	z-index: 999999999;
+	color: #ffffff;
 }
 
 .menu-list {
@@ -32,14 +37,33 @@ body {
 }
 
 .menu-item {
-	padding: 15px 40px;
-	color: white;
+	padding: 10px 40px 10px 40px;
+	color: #ffffff;
 }
 
-.menu-item:hover {
+.menu-item-submenu {
+	list-style-type: none;
+	padding: 0px;
+	display: none;
+}
+
+.menu-item-submenu li {
+	display: block;
+}
+
+.menu-item-submenu li a{
+	display: block;
+	padding-left: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.menu-item:hover,
+.menu-item-submenu li a:hover {
+	display: block;
 	background-color: #808080;
-	font-size: 14pt;
-	font-weight: 700;
+	color: #ffffff;
+	font-weight: 400;
 }
 
 .main {
@@ -131,7 +155,8 @@ body {
 	padding: 0px;
 }
 
-.nav ul:hover li:first-child:hover {
+.nav ul li:first-child,
+.nav ul li:first-child:hover {
 	background-color: transparent;
 
 }
@@ -174,6 +199,7 @@ a:hover {
 }
 
 .cover-page {
+	background-color: white;
 	background-image: url('../images/car2.jpg');
 	-webkit-background-size: cover;
 	background-size: cover;
