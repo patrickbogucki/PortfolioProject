@@ -1,14 +1,53 @@
 body {
 	margin: 0;
 	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	position: relative;
+}
+
+.progress-bar {
+	position: fixed;
+	top: 0px;
+	background-color: red;
+	height: 3px;
+	width: 0%;
+	z-index: 300;
+	z-index: 99999999999;
+}
+
+.menu-panel {
+	left: -250px; 
+	height: 100%;
+	position: fixed;
+	width: 250px;
+	background-color: #353445;
+	z-index: 999999999;
+}
+
+.menu-list {
+	margin-top: 100px;
+	list-style: none;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.menu-item {
+	padding: 15px 40px;
+	color: white;
+}
+
+.menu-item:hover {
+	background-color: #808080;
+	font-size: 14pt;
+	font-weight: 700;
+}
+
+.main {
+
 }
 
 .container {
 
-}
-
-.nav-container {
-	width: 100%;
 }
 
 .logo {
@@ -20,7 +59,8 @@ body {
 	left: 40px;
 	border: dashed;
 	text-align: center;
-	z-index: 200;
+	cursor: pointer;
+	z-index: 9999999999;
 }
 
 .logo-inverted {
@@ -36,14 +76,16 @@ body {
 	margin-top: 13px;
 }
 
-.nav {
+.nav-container {
 	position: absolute;
 	width: 100%;
+	height: 51px;
 	top: 0px;
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: auto;
+	margin-right: auto;*/
 	text-align: center;
 	color: #ffffff;
+	z-index: 999999999;
 }
 
 .nav-fixed {
@@ -52,6 +94,76 @@ body {
 
 }
 
+.nav {
+	display: inline-flex;
+}
+
+.nav ul {
+	list-style: none;
+	display: inline-block;
+	visibility: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+
+.nav li {
+	display: block;
+}
+
+.nav ul:hover li {
+	visibility: visible;
+	background-color: #000000;
+}
+
+.nav ul li a {
+	display: inline-block;
+	width: 200px;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.nav ul:hover li:hover{
+	background-color: #353445;
+}
+
+.nav ul:hover li:first-child {
+	padding: 0px;
+}
+
+.nav ul:hover li:first-child:hover {
+	background-color: transparent;
+
+}
+
+.nav-header {
+	visibility: visible;
+}
+
+.nav-header a {
+	padding-top: 0px;
+	color: red;	
+}
+
+.nav-item-inview {
+	text-decoration: underline;
+}
+
+.nav-sub {
+	display: inline;
+	position: relative;
+	visibility: hidden;
+
+}
+
+.nav-sub li {
+	display: block;
+}
+
+.nav-sub :first-child {
+	visibility: visible;
+}
 
 a:link,
 a:visited {
@@ -88,14 +200,17 @@ a:hover {
 	font-weight: 300;
 	font-size: 30pt;
 	color: #ffffff;
-	text-shadow: 2px 2px 10px #000000;
 }
 
 .long-text {
 	width: 50%;
-	padding-top: 20px;
+	padding-top: 55px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.long-text-background {
+
 }
 
 h1 {
@@ -107,15 +222,70 @@ h1 {
 .down {
 	height: 10%;
 	width: 10%;
+	cursor: pointer	;
 }
 
 .down:hover {
 	opacity: 0.5;
 }
 
+.gallery-container {
+	background-color: #DBDBDB;
+}
+
+.gallery {
+	text-align: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+.project {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	background-color: #000000;
+	background-image: url('../images/car.jpg');
+	background-size: cover;
+	opacity: 0.5;
+	margin: 10px;
+	display: inline-block;
+	vertical-align: bottom;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.project.img {
+	width: 250px;
+	height: 250px;
+}
+
+.project:hover {
+	opacity: 1.0;
+}
+
+.info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	background-color: #ffffff;
+}
+
+.info-text {
+	margin-top: 5px;
+}
+
+
+
+
 .the-end {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	width: 100%;
 	margin: 0px;
 	text-align: center;
@@ -123,5 +293,18 @@ h1 {
 	margin-right: auto;
 	background-color: #000000;
 	color: #ffffff;
-	text-decoration: underline;
 } 
+
+.contact-btn {
+	display: inline-block;
+	width: 160px;
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	cursor: pointer	;
+}
+
+.contact-btn:hover {
+	color: #000000;
+	background-color: #ffffff;
+	opacity: 1;
+}
