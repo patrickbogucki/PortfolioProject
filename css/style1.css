@@ -16,11 +16,11 @@ body {
 }
 
 .menu-panel {
-	left: -285px; 
+	left: -250px; 
 	height: 100%;
 	position: fixed;
-	width: 285px;
-	background-color: black;
+	width: 250px;
+	background-color: #353445;
 	z-index: 999999999;
 }
 
@@ -32,13 +32,12 @@ body {
 }
 
 .menu-item {
-	padding: 20px 40px;
+	padding: 15px 40px;
 	color: white;
 }
 
 .menu-item:hover {
 	background-color: #808080;
-	color: black;
 	font-size: 14pt;
 	font-weight: 700;
 }
@@ -77,10 +76,6 @@ body {
 	margin-top: 13px;
 }
 
-.nav {
-	
-}
-
 .nav-container {
 	position: absolute;
 	width: 100%;
@@ -99,12 +94,75 @@ body {
 
 }
 
-.nav-item {
-	display: inline;
+.nav {
+	display: inline-flex;
 }
 
-.nav-item-portfolio-inview {
+.nav ul {
+	list-style: none;
+	display: inline-block;
+	visibility: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+
+.nav li {
+	display: block;
+}
+
+.nav ul:hover li {
+	visibility: visible;
+	background-color: #000000;
+}
+
+.nav ul li a {
+	display: inline-block;
+	width: 200px;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.nav ul:hover li:hover{
+	background-color: #353445;
+}
+
+.nav ul:hover li:first-child {
+	padding: 0px;
+}
+
+.nav ul:hover li:first-child:hover {
+	background-color: transparent;
+
+}
+
+.nav-header {
+	visibility: visible;
+}
+
+.nav-header a {
+	padding-top: 0px;
+	color: red;	
+}
+
+.nav-item-inview {
 	text-decoration: underline;
+}
+
+.nav-sub {
+	display: inline;
+	position: relative;
+	visibility: hidden;
+
+}
+
+.nav-sub li {
+	display: block;
+}
+
+.nav-sub :first-child {
+	visibility: visible;
 }
 
 a:link,
@@ -193,7 +251,7 @@ h1 {
 	background-image: url('../images/car.jpg');
 	background-size: cover;
 	opacity: 0.5;
-	margin: 20px;
+	margin: 10px;
 	display: inline-block;
 	vertical-align: bottom;
 	cursor: pointer;
@@ -214,7 +272,7 @@ h1 {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 50%;
+	height: 30%;
 	background-color: #ffffff;
 }
 

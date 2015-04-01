@@ -10,8 +10,14 @@ http://patrickbogucki.github.io/BootstrapPractice1/html/index.html
 ### Current
 * Full screen cover that adjusts to viewport size
 * Nav bar
+* Fixed nav bar
+* Pullout menu
+* Thumbnail gallery with slide up info panels
+* Scroll to location
 
 ### Pending
-* Fixed nav bar
+* Hover dropdown submenus from navbar
+* Click submenus in pullout menu
+* Navigation style changed based on page location
+* Animations for items while scrolling to them
 * Responsive design for mobile
-* Javascript additions to come!

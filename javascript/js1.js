@@ -71,19 +71,19 @@ var main = function() {
 		if(!menuOpen) {
 			// $('body').animate({
 			// 		left: '' + menuWidth + 'px'
-			// 	}, 200);
+			// 	}, 300);
 			$('.menu-panel').stop().animate({
 				left: '0px'
-				}, 200);
+				}, 300);
 			menuOpen = true;
 		}
 		else if(menuOpen) {
 			// $('body').animate({
 			// 		left: '0px'
-			// 	}, 200);
+			// 	}, 300);
 			$('.menu-panel').stop().animate({
 				left: '-' + menuWidth + 'px'
-				}, 200);
+				}, 300);
 			menuOpen = false;
 		}
 	});
@@ -95,10 +95,10 @@ var main = function() {
 		element: $('.gallery-container'),
 		handler: function(direction) {
 			if(direction === 'down') {
-				$('.nav-item-portfolio').addClass('nav-item-portfolio-inview')
+				$('.nav-item-portfolio').addClass('nav-item-inview')
 			}
 			else if(direction === 'up') {
-				$('.nav-item-portfolio').removeClass('nav-item-portfolio-inview')
+				$('.nav-item-portfolio').removeClass('nav-item-inview')
 			}
 		},
 		offset: '50%'
