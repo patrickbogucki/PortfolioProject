@@ -16,6 +16,7 @@ http://patrickbogucki.github.io/BootstrapPractice1/html/index.html
 * Scroll to location
 
 ### Pending
+* Fix scrolling to location underlines current nav location
 * Hover dropdown submenus from navbar
 * Click submenus in pullout menu
 * Navigation style changed based on page location
