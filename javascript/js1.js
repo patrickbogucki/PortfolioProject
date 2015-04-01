@@ -85,6 +85,7 @@ var main = function() {
 				left: '-' + menuWidth + 'px'
 				}, 300);
 			menuOpen = false;
+			$('.menu-item-submenu').slideUp();
 		}
 	});
 
@@ -103,9 +104,20 @@ var main = function() {
 		},
 		offset: '50%'
 	});
+
+
+	// Open submenus in side popup menu
+	$('.menu-item').click(function() {
+		$(this).next().stop().slideToggle('slow');
+	});
+
+
+
 };
 
 
 
 
 $(document).ready(main);
+
+// BONES TO THE FRIDGE!!!!!!!!!!!!!!!!!!!!!!!
