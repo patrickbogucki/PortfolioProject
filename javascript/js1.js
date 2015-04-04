@@ -23,11 +23,14 @@ var main = function() {
 		// out of sight
 		if($(document).scrollTop() > window.innerHeight) {
 			showNavBar();
+			$('.back-to-top').fadeIn();
 		}
 		else if($(document).scrollTop() < window.innerHeight) {
 			$('.logo').removeClass('logo-inverted');
 			$('.nav-container').removeClass('nav-fixed');
 			$navVisible = false;
+
+			$('.back-to-top').fadeOut();
 		}
 
 		// Increase loadbar during scrolling by changing
@@ -57,7 +60,6 @@ var main = function() {
 	$('.project').mouseleave(function() {
 		$('.info').stop().slideUp(200);
 	});
-
 
 	// TODO have gallery items fade in when scrolling and their
 	// area comes in view
@@ -111,7 +113,12 @@ var main = function() {
 		$(this).next().stop().slideToggle('slow');
 	});
 
-
+	$('.back-to-top').click(function() {
+		$('.site').ScrollTo({
+			duration: 1500,
+			erasing: 'linear'
+		});
+	});
 
 };
 
@@ -119,5 +126,3 @@ var main = function() {
 
 
 $(document).ready(main);
-
-// BONES TO THE FRIDGE!!!!!!!!!!!!!!!!!!!!!!!
